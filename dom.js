@@ -63,6 +63,22 @@ const $ = function (selector) {
     }
   }
 
+  // added show funtion to display element
+  const show = function() {
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].style.display = '';
+    }
+  }
+
+  // added show funtion to hide element
+  const hide = function() {
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].style.display = 'none';
+    }
+  }
+
+
+
   return {
     text: text,
     html: html,
@@ -73,6 +89,8 @@ const $ = function (selector) {
     append: append,
     prepend: prepend,
     on: on,
-    val: val
+    val: val,
+    show: show,
+    hide: hide
   };
 }
